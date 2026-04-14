@@ -1,0 +1,9 @@
+{
+  "name": "icp-builder-netlify-functions",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Dependencies for Netlify serverless functions.",
+  "dependencies": {
+    "node-fetch": "^2.7.0"
+  }
+}

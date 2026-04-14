@@ -1,0 +1,134 @@
+.app {
+  min-height: 100vh;
+  color: var(--text);
+}
+
+.app__header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.app__header-inner {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 1rem 1.25rem 1.1rem;
+}
+
+.app__title {
+  margin: 0;
+  font-size: 1.35rem;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.app__tagline {
+  margin: 0.35rem 0 0;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.app__main {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 7.25rem 1.25rem 2.25rem;
+}
+
+.app__loading,
+.app__error {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2.15rem 1.6rem;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f9fbff 100%);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+}
+
+.app__spinner {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0 auto;
+  border: 3px solid #dbeafe;
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: app-spin 0.9s linear infinite;
+}
+
+.app__loading-text {
+  margin: 1rem 0 0.1rem;
+  color: #334155;
+  font-size: 1.04rem;
+  font-weight: 500;
+}
+
+.app__error-title {
+  margin: 0;
+  font-size: 1.24rem;
+  color: #9f1239;
+}
+
+.app__error-message {
+  margin: 0.75rem 0 1.25rem;
+  color: #334155;
+  line-height: 1.65;
+}
+
+.app__retry-button {
+  border: none;
+  border-radius: 0.7rem;
+  background: linear-gradient(135deg, var(--primary) 0%, #6366f1 100%);
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.72rem 1.25rem;
+  cursor: pointer;
+  box-shadow: 0 10px 18px rgba(79, 70, 229, 0.28);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.app__retry-button:hover {
+  filter: brightness(1.02);
+  transform: translateY(-1px);
+  box-shadow: 0 13px 24px rgba(79, 70, 229, 0.33);
+}
+
+.app__retry-button:active {
+  transform: translateY(0);
+}
+
+.app__retry-button:focus-visible {
+  outline: 3px solid rgba(79, 70, 229, 0.3);
+  outline-offset: 2px;
+}
+
+@media (max-width: 720px) {
+  .app__header-inner {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .app__main {
+    padding: 7rem 1rem 1.5rem;
+  }
+
+  .app__title {
+    font-size: 1.2rem;
+  }
+
+  .app__tagline {
+    font-size: 0.9rem;
+  }
+}
+
+@keyframes app-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

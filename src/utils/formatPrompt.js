@@ -1,0 +1,1 @@
+// Prompt formatting utility placeholder.

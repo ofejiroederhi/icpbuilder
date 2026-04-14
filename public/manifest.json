@@ -1,0 +1,7 @@
+{
+  "short_name": "ICP Builder",
+  "name": "ICP Builder",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone"
+}
