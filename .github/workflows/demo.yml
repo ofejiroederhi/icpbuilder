@@ -1,0 +1,22 @@
+name: Secret Scanner Pipeline
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  security-check:
+    name: Scan for Hardcoded Credentials
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Hunt for Secrets
+        run: |
+          echo "Starting security scan..."
+          if grep -qi "password=" app.py; then
+            echo "CRITICAL FAILURE: Hardcoded password detected in app.py!"
+            exit 1
+          else
+            echo "Scan passed. No obvious secrets found."
+          fi
