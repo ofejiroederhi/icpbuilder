@@ -19,7 +19,7 @@ Project scaffold for a Create React App-based ICP Builder application.
 3. In Netlify, add the same environment variables in:
    Site settings -> Build & deploy -> Environment -> Environment variables.
    Add at least:
-   - OPENAI_API_KEY = "dummmyK3y4t32t"
+   - OPENAI_API_KEY= "dummmyK3y4t32t"
    - `REACT_APP_FUNCTION_URL` (for example: `/.netlify/functions/generate-icp`)
 
 4. Verify the function receives the API key correctly:
